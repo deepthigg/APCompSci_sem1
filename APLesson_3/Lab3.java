@@ -30,6 +30,13 @@ public class Lab3
 	
 		System.out.println("That sounds like fun!");
 		
+		//prompt for your user input
+		System.out.println("What kind of music do you listen to?");
+		
+		String music = keyboard.next();
+	
+		System.out.println("Cool music!");
+		
 	}
 	
 }
