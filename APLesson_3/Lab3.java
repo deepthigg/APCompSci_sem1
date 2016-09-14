@@ -28,14 +28,34 @@ public class Lab3
 		
 		String fun = keyboard.next();
 	
-		System.out.println("That sounds like fun!");
+		System.out.println(" Cool! " + fun + "sounds like fun!");
 		
 		//prompt for your user input
-		System.out.println("What kind of music do you listen to?");
+		System.out.println("What kind of music do you like?");
 		
 		String music = keyboard.next();
 	
-		System.out.println("Cool music!");
+		System.out.println("Oh! " + music + " is nice!");
+		
+		//prompt for your user input
+		System.out.println("How many siblings do you have?");
+		
+		int sibling= keyboard.nextInt();
+	
+		System.out.println("Cool! " + sibling + "sibling sounds like a good number.");
+		
+		//prompt for your user input
+		System.out.println("What do you want to be when you grow up?");
+		
+		String be = keyboard.next();
+	
+		System.out.println("Nice! a " + be + " is very helpful.");
+		
+	
+		
+		
+		
+
 		
 	}
 	
