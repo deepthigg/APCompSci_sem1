@@ -16,9 +16,9 @@ public class Lab3_ex_02
 	
 	    int w = kb.nextint();
 		
-		int recarea = l * w ;
+		int rec = (l * w);
 		
-		System.out.println( The area of your table is" + recarea);
+		System.out.println( The area of your table is" + rec);
 	
 		
 	 
