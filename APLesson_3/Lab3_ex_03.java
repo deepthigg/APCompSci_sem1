@@ -4,8 +4,8 @@ public class Lab3_ex_02
 {
 	public static void main(String[]args);
 	{
-		
-		Scanner keyboard = new Scanner(System.in);
+		//instantiate the new Scanner object "keyboard"
+		Scanner kb = new Scanner(System.in);
 	
 	    //prompt for your user input
 	    System.out.println("what is the length of your table in meters?");
