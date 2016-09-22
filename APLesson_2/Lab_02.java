@@ -8,6 +8,8 @@ public class Lab_02
 		
 		System.out.println("6 and 5 produce" +" "+ multiplication);
 		
+		System.out.println("                 ");
+		
 
 		String a = "Deepthi Gangiredla";
 		String b = "12631 El Caminio Real";
@@ -17,6 +19,10 @@ public class Lab_02
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c + ","+ d);
+		
+		
+		System.out.println("                 ");	
+		
 		
 		int w=8;
 		int l=7;
