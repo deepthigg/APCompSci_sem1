@@ -26,7 +26,7 @@ public class Excersice_01_Rectangle
 	
 	public static void method1()
 	{
-		System.out.println("Your rectangle is" + calcPerim() + " sq around.");
+		System.out.printf(" Your rectangle is" + "%10.5f\n" , calcPerim(), "  sq around. ");
 	}
 	
 	
