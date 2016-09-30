@@ -2,31 +2,32 @@ import java.util.Scanner;
 
 public class Excersice_01_Rectangle
 {
-	static double length;
-	static double width;
+	static double l;
+	static double w;
+	static double perimeter;
 	
 	public static void main(String[]args)
 	{
 		Scanner kb= new Scanner(System.in);
 		System.out.println("Please enter the lenght:");
-		length= kb.nextDouble();
+		l= kb.nextDouble();
 		System.out.println("Please enter the width");
-		width= kb.nextDouble();  
+		w= kb.nextDouble();  
 		
 		calcPerim();
 		method1();
 		
 		
 	}
-	public static double calcPerim()
+	public static void calcPerim()
 	{
-		return (2 * length) + (2 * width);
+		perimeter = 2 * ( l + w );
 
 	}
 	
 	public static void method1()
 	{
-		System.out.printf(" Your rectangle is" + "%10.5f\n" , calcPerim(), "  sq around. ");
+		System.out.printf(" Your rectangle is " + " %.5f\n " , perimeter,  "  sq around. ");
 	}
 	
 	

@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class cube
 {
 	static double side;
+	static double area;
+	
 	
 	
 	public static void main(String[]args)
@@ -17,15 +19,15 @@ public class cube
 		
 		
 	}
-	public static double calcsurf()
+	public static void calcsurf()
 	{
-		return 6.0* (side *side);
+		area= 6.0* (side *side);
 
 	}
 	
 	public static void method1()
 	{
-		System.out.printf("The surface area of a cube with " + side + " is " +  "%10.5f\n", calcsurf());
+		System.out.printf("The surface area of a cube with " + side + " is " +  "%.5f\n", area);
 	}
 	
 	

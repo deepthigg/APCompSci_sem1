@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class circle
 {
 	static double radius;
+	static double area;
 	
 	
 	public static void main(String[]args)
@@ -18,18 +19,16 @@ public class circle
 		
 	
 	}
-	public static double calcArea()
+	public static void calcArea()
 	{
-		return 3.14* (radius * radius);
+		area= 3.14* (radius * radius);
 		
 	}
 
 	
 	public static void method1()
 	{
-		
-		
-		System.out.printf("The area of a circle with a radius of " + radius + " is " + "%10.f\n", calcArea());
+		System.out.printf("The area of a circle with a radius of " + radius + " is %.5f\n", area);
 	}
 	
 	
