@@ -4,42 +4,52 @@ public class lab5_02
 	public static void main (String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
+		
 		System.out.println("Please enter first item: ");
-		String one= kb.next();
+		String ione= kb.next();
 		System.out.println("Please enter price of this item ");
 		double pone= kb.nextDouble();
 		System.out.println("Please enter second item: ");
-		String two= kb.next();
+		String itwo= kb.next();
 		System.out.println("Please enter price of this item ");
 		double ptwo= kb.nextDouble();
 		System.out.println("Please enter third item: ");
-		String three= kb.next();
+		String ithree= kb.next();
 		System.out.println("Please enter price of this item ");
 		double pthree= kb.nextDouble();
 		System.out.println("Please enter fourth item: ");
-		String four= kb.next();
+		String ifour= kb.next();
 		System.out.println("Please enter price of this item ");
 		double pfour= kb.nextDouble();
 		
 		double subtotal = pone+ ptwo + pthree + pfour;
-		double disount= discount(total);
-		double tax = add * 8.25
-		double total = subtotal - discount +t ax
+		double discount= calcDisc(subtotal);
+		double tax = subtotal * 0.08;
+		double total = subtotal - discount +tax;
 		
-		if (dicount(total))
-			System.out.println("Discount is 15% of the subtotal");
-		if (!dicount(total))
-			System.out.println("Discount is 0%");
+		System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<Receipt>>>>>>>>>>>>>>>>>>>");
+		format(itwo,ptwo);
+		format(itwo,ptwo);
+		format(ithree,pthree);
+		format(ithree,pthree);
+		format( "Subtotal", subtotal);
+		format( "Discount", discount);
+		format( "Tax", tax);
+		format( "Total", subtotal);
+		System.out.println("________________________________________");
+		System.out.println("Thank you");
 	}
 	
-	public static boolean discount(total)
+	public static double calcDisc(double sub)
 	{
-		return (total >= 2000 )
+		 if (sub >= 2000 )
+			 return sub * 0.15;
+		 return 0.0;
 		
 	}
-	public static format()
+	public static void format(String i,double p)
 	{
-		
+		System.out.printf("%20s.....................$%.2f\n",i,p);
 		
 	}
 }
