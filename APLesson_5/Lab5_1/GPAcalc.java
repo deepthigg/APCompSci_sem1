@@ -24,7 +24,7 @@ public class GPAcalc
 	
 		double gpa = grades / 7;
 		
-		System.out.println(" Your GPA is  " + gpa);
+		System.out.printf(" Your GPA is %.5f " + gpa);
 	
 	}
 	public static double calcGrades(String grade)
