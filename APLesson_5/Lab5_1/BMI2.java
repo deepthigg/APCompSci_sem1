@@ -12,28 +12,25 @@ public class BMI2
 		double w = kb.nextDouble();
 		
 		
-		double BMI = (w *703) / (h * h) ;
+		double BMI = (w *703) / (h * h);
 		String condition = calcCondish(BMI);
-		System.out.printf("You BMI is: %.3f " + BMI);
+		System.out.printf("You BMI is: %.3f ",BMI);
 		System.out.println("You are:"+ condition);
 		
 	}
-	public static void calcCondish(double BMI)
+	public static String calcCondish(double BMI)
 	{
 		if (BMI < 18.5)
 			return "Underweight";
-		else if ( BMI < 24.9)
+		else if ( BMI < 25)
 			return "Normal";
-		else if ( BMI < 29.9)
+		else if ( BMI < 30)
 			return "Overweight";
-		else if ( BMI < 34.9)
+		else if ( BMI < 35)
 			return "Obese";
-		else if ( BMI < 39.9)
+		else if ( BMI < 40)
 			return "Very Obese";
-		else if ( BMI > 39.9)
+		else
 			return "Moribidly Obese";
-		
-		return "";
-		
 	}
 }
