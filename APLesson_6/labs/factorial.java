@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class box
+public class factorial
 {
 	public static void main(String[]args)
 	{
@@ -8,13 +8,11 @@ public class box
 		int number = kb.nextInt();
 		int factorial = 1;
 		
-	`	for(int i= i <=number; i++ )
-			{
-				factorial*= i ;
-				System.out.println("Number:" + number);
+	    for(int i = 1 ; i <= number; i++)
+		{
+			factorial = factorial *i;
+		}
 			
-			}
-			
-		
+		System.out.println("Factorial: " + factorial);
 	}
 }
