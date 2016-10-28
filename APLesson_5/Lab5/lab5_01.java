@@ -14,8 +14,6 @@ public class lab5_01
 		if (!rolldice(num1, num2))
 			System.out.println("Winner is computer");
 		
-		
-		
 	
 	}
 	public static boolean rolldice(int num1, int num2)

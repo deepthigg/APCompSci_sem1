@@ -1,45 +1,58 @@
+import java.util.Scanner;
 public class lab_4
 {
 	public static void main(String[]args)
 
 	{
 		lab_4 form = new lab_4();
+		Scanner kb = new Scanner(System.in);
 		
-		System.out.println("<<<<<<<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>");
 		
 		
-		String word1= "Cheese Sandwich.....";
-		double number1= 4.50;
+		System.out.println("Please enter item 1:");
+		String word1= kb.nextLine();
+		System.out.println("Please enter the price:");
+		double number1= kb.nextDouble();
 		
-		form.format( word1, number1);
+		kb.nextLine();
 		
 	
-		String word2 = "French Fries.....";
-		double number2 = 2.88;
-		form.format(word2, number2);
+		System.out.println("Please enter item 2:");
+		String word2= kb.nextLine();
+		System.out.println("Please enter the price:");
+		double number2= kb.nextDouble();
+	
 		
+		kb.nextLine();
 		
-		String word3 = "Soda.....";
-		double number3 = 1.63;
-		form.format( word3, number3);
+		System.out.println("Please enter item 3:");
+		String word3= kb.nextLine();
+		System.out.println("Please enter the price:");
+		double number3= kb.nextDouble();
+		
+	
 		
 		System.out.println("                     ");
 		
-
+		Double number4 = number1 + number2 + number3;
 		String word4 = " Subtotal:....";
-		double number4 = 9.01;
-		form.format(word4, number4);
 		
 	
 		String word5 = " Tax:....";
-		double number5 = 0.63;
-		form.format(word5, number5);
+		double number5 = number4 * 0.08;
 		
 	
 		String word6 = "Total:....";
-		double number6 = 9.64;
-		form.format(word6, number6);
+		double number6 = number4 + number5 ;
 		
+		
+		System.out.println("<<<<<<<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>");
+		form.format( word1, number1);
+		form.format(word2, number2);
+		form.format( word3, number3);
+		form.format(word4, number4);
+		form.format(word5, number5);
+		form.format(word6, number6);
 		System.out.println("        ");
 		System.out.println("_____________________________________________");
 		System.out.println("*Thank you for your support*");
