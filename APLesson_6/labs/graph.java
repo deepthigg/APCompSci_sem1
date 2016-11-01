@@ -4,14 +4,14 @@ public class graph
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter a the frist  value");
+		System.out.println("Please enter a the first  value");
 		int value= kb.nextInt();
-		System.out.println("Please enter the siz of your table");
+		System.out.println("Please enter the size of your table");
 		int size= kb.nextInt();
 		
-	    for(value i = 1 ; i <= size; i++)
+	    for(int i = 1 ; i <= size; i++)
 		{
-			Formula = value * i;
+			System.out.printf(i + " " + i * value + "\n");
 		}
 
 	}
