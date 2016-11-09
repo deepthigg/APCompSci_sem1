@@ -26,13 +26,25 @@ public class Password
 		else
 		{
 			if (name.equals(username))
+			{
 				System.out.println(" Password is incorrect");
+				passCheck();
+			 
+			}
+				
 
 			else if (word.equals (password))
+			{
 				System.out.println("Username is incorrect");
+				passCheck();
+			}
+			
 			
 			else
+			{
 				System.out.println("Your password and username are incorrect");
+				passCheck();
+			}
 		}
 		
 	}
