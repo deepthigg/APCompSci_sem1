@@ -3,32 +3,28 @@ public class FirstLetter
 {
 	public static void main(String[]args)
 	{
-		String [] names = new String[5];
+		String [] words = new String[5];
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter 5 words: ");
 		
-		//fills the array
-		for(int i = 0; i < word.length; i++)
+	
+		for(int i = 0; i < words.length; i++)
 		{
-			word[i] = kb.next();
+			words[i] = kb.next();
 		}	
 		
-		//print the array 
-		for(String letter : word)
-		{
-			System.out.print("\"" + First(words) + "\" ,");
-			
-		}
+		
+		System.out.println(First(words));
 	}
-	public static int First(String[] l)
+	public static String First(String[] w)
 	{
-		String first= 0;
-		for(String letter : l)
+		String firstletters = "";
+		for(String word : w)
 		{
-			first = word.substring(0,0);
+			firstletters += word.substring(0,1) + " ";
 		}
 		
-		return first;
+		return firstletters;
 	}
 	
 }

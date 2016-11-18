@@ -1,6 +1,7 @@
 import java.util.Scanner;
-public class Arrays_2
+public class Average
 {
+	
 	public static void main(String[]args)
 	{
 		int[] numbers= new int[10];
@@ -11,19 +12,20 @@ public class Arrays_2
 		}
 		
 		for(int num : numbers)
-		System.out.println(num);
+		System.out.print(num + " ");
 		System.out.println();
-		System.out.println(" The sum of the numbers above is...." + sumArray(numbers));
+		System.out.println(" The average of the numbers above is...." + average(numbers));
 	}
-	public static int sumArray(int[] n)
+	public static int average(int[] n)
 	{
-		int sum = 0;
+		int avg = 0;
 		for(int num : n)
 		{
-			sum += num;
+			avg+= num;
+		
 		}
 		
-		return sum;
+		return avg/10;
 	}
 	
 }
