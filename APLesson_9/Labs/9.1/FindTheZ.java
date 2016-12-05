@@ -6,9 +6,9 @@ public class FindTheZ
 	{
 		words= new String[5];
 		fillArray();
-		System.out.println("For the followin words..." + numbers);
-		printArray(numbers);
-		System.out.println("Only " + hasZ(words)+ " have a z");
+		System.out.print("For the following words...");
+		printArray(words);
+		System.out.println("Only " + hasZ(words)+ " has a z");
 	}
 
 	public static void fillArray()
@@ -17,14 +17,14 @@ public class FindTheZ
 		System.out.println("Please enter 5 words: ");
 		for (int i = 0; i < words.length; i++)
 		{
-			words[i]= kb.next ();
+			words[i]= kb.next();
 
 		}
 	}
 	
 	public static void printArray(String[] words)
 	{
-		for(int words : word)
+		for(String word : words)
 		{
 			System.out.println(word);
 		}
@@ -33,10 +33,12 @@ public class FindTheZ
 	public static String hasZ(String[] words)
 	{
 		String zs = "";
-		for(int word : words)
+		for(String word : words)
 		{
-			
-			zs += word + ",";
+			if (word.indexOf("z") >= 0)
+			{
+				zs += word + " ";
+			}
 	
 		}
 		return zs;
