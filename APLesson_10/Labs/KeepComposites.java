@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 public class KeepComposites
 {
-	static ArrayList<Integer> nums;
+	static ArrayList<Integer> equation;
 	
 	public static void main(String[]args)
 	{
@@ -44,3 +44,23 @@ public class KeepComposites
 	}
 	
 }
+
+
+Scanner kb = new Scanner(System.in);
+		System.out.println("Please enter an equation: ");
+		String expression = kb.nextLine();
+		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
+		
+		int i = 0;
+		while(i< equation.size())
+		{
+			if(i< equation.set() && equation.get(i).equals("+"))
+			{
+				equation.set( i, "" + (Integer.parseInt(equation.get(i +1))));
+				equation.remove(i-1);
+				equation.remove(i);
+			}
+			else
+				i++;
+		}
+		System.out.println(doEquation(equation));
