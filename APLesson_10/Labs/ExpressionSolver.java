@@ -11,60 +11,54 @@ public class ExpressionSolver
 		System.out.println("Please enter an equation: ");
 		String expression = kb.nextLine();
 		equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
+		//System.out.println(equation);
 		doEquation();
+		System.out.println(equation);
 	
 	}
 	
 
-	static int doEquation()
+	static void doEquation()
 	{
 		int i = 0;
-		while(i< equation.size())
+		while(i < equation.size())
 		{
-
 			if (equation.get(i).equals("*")|| equation.get(i).equals("/"))
 			{
 	
 				if (equation.get(i).equals("*"))
 				{
-					equation.set(i, "" + (Intger.parseInt(equation(i-1)) * Integer.parseInt(equation(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
 				}
 				
 				else
 				{
-					equation.set(i, "" + (Intger.parseInt(equation(i-1)) / Integer.parseInt(equation(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
 				}
 				equation.remove(i-1);
 				equation.remove(i);
-				
 			}
 			i++	;
 		}
+		
 		i = 0;
-		while(i< equation.size())
+		while(i < equation.size())
 		{
 			if (equation.get(i).equals("+")|| equation.get(i).equals("-"))
 			{
 				if (equation.get(i).equals("+"))
 				{
-					equation.set(i, "" + (Intger.parseInt(equation(i-1)) + Integer.parseInt(equation(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
 				}
 				
 				else
 				{
-					equation.set(i, "" + (Intger.parseInt(equation(i-1)) - Integer.parseInt(equation(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
 				}
-			
-
+				equation.remove(i-1);
+				equation.remove(i);
 			}
-			equation.remove(i-1);
-			equation.remove(i);
+			i++;
 		}
-		i++;
-
-	}
-
-	
-	
-	
+	}	
 }
