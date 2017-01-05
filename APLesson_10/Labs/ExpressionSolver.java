@@ -57,8 +57,10 @@ public class ExpressionSolver
 				}
 				equation.remove(i-1);
 				equation.remove(i);
+				
 			}
-			i++;
+				i++;
 		}
+		
 	}	
 }

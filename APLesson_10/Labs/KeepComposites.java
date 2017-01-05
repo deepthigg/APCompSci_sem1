@@ -3,21 +3,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 public class KeepComposites
 {
-	static ArrayList<Integer> equation;
+	static ArrayList<Integer> nums;
 	
 	public static void main(String[]args)
 	{
 		Integer [] numbers = {2,6,8,9,10,12,13,15,17,24,55,66,78,77,79};
 		nums = new ArrayList<>(Arrays.asList(numbers));
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Numbers: ");
+		System.out.println("numbers: ");
 		System.out.println(nums);
 		removePrimes();
-		System.out.println("\nPrimes of numbers...");
+		System.out.println("\nPrimes ..");
 		System.out.println(nums);		
 	}
 	
-	// Find even number
+	
 	static int gFactor(int n)
 	{
 		for (int i = 2; i < n ; i++)
@@ -29,7 +29,7 @@ public class KeepComposites
 		}
 		return 0;
 	}
-	// Remove prime number from the list
+	
 	
 	static void removePrimes()
 	{
@@ -46,21 +46,6 @@ public class KeepComposites
 }
 
 
-Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter an equation: ");
-		String expression = kb.nextLine();
-		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
+
 		
-		int i = 0;
-		while(i< equation.size())
-		{
-			if(i< equation.set() && equation.get(i).equals("+"))
-			{
-				equation.set( i, "" + (Integer.parseInt(equation.get(i +1))));
-				equation.remove(i-1);
-				equation.remove(i);
-			}
-			else
-				i++;
-		}
-		System.out.println(doEquation(equation));
+		

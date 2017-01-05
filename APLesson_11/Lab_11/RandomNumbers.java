@@ -1,7 +1,9 @@
 public class RandomNumbers
+
 {
 	public static void main(String[]args)
 	{
+		
 		
 		int [][] nums = new int [4][4];
 
@@ -11,7 +13,7 @@ public class RandomNumbers
 		{
 			for(int j = 0; j < nums[i].length; j++)
 			{
-				nums[i][j] = (int) Math.random();
+				nums[i][j] = (int)(Math.random()*100)+1;
 				
 			}
 		}
