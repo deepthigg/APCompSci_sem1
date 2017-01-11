@@ -1,28 +1,28 @@
 import java.util.Scanner;
 public class GameGun
 {
-	int bulletCount;;
-	int CLIPSIZE = 16;
-	int shotCount;
-	String [] clip;
+	static int bulletCount;
+	static int CLIPSIZE = 16;
+	static int shotCount;
+	static String [] clip;
 	 
 	public static void main(String[]args)
 	{
 		bulletCount = 96;
 		shotCount = 0;
-		clip = new CLIPSIZE();
+		clip = new String [CLIPSIZE];
 		resetClip();
 		Scanner kb = new Scanner(System.in);
 		
-		while (bulletCount || shotCount > 0)
+		while (bulletCount > 0 || shotCount > 0)
 		System.out.println(" Action : ");
 		String action = kb.nextLine();
 		{
-			if action = "R"
+			if (action.equals("R"))
 			{
 				reload();
 			}
-			if action = "S"
+			if (action.equals("S"))
 			{
 				System.out.println(shoot());
 
@@ -33,49 +33,59 @@ public class GameGun
 		}
 	
 	}
-	public static resetClip()
+	static void resetClip()
 	{
-		for(int i =0; i < clip.length; i++))
+		for(int i =0; i < clip.length; i++)
 		{
-			clip[i] = "[]"
+			clip[i] = "[]";
 		}
 		
 	}
 	
-	public static shoot()
+	public static int shoot()
 	{
-		if shotCount > 0
+		
+		if (shotCount > 0)
 		{
-			clip [shotCount - 1] = "[]"
-			shotCount - 1;
-			System.out.print("Boom!!");
+			clip [shotCount - 1] = "[]";
+			shotCount -= 1;
+			return "Boom!!";
 		}
-		System.out.println("Reload!!!");
+		return "Reload!!!";
 	}
 	
-	public static reload()
+	static void reload()
 	{
 		if (bulletCount >= CLIPSIZE )
 		{
-			bulletCount - CLIPSIZE;
-			shotCounttCount = CLIPSIZE;
+			bulletCount -= CLIPSIZE;
+			shotCount = CLIPSIZE;
 		}
 		else
 		{
 			shortCount = bulletCount;
 			bulletCount = 0;
 		}
+	
+	
 		resetClip();
-		for(int i =0; i < shotCount.length; i++))
+		
+		for(int i =0; i < shotCount.length; i++)
 		{
 			clip[i] = " * ";
 		}
-	
 	}
 	
-	public static printClip()
+	static void printClip()
 	{
+		String output = "" ;
+		System.out.println("Bullets:" + "/t" + bulletCount + newLine + "Clip: " + "/t");
 		
+		for(int i =0; i < clip.length; i++)
+		{
+			clip[i] += output;
+		}
+		System.out.println(" output");
 	}
 	
 }
