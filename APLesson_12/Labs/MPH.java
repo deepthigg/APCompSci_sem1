@@ -5,9 +5,9 @@ public class MPH
 	private int distance, hours, minutes;
 	private double mph;
 	
+	//defalut values for instance vars
 	public MPH()
 	{
-		//defalut values for instance vars
 		distance = 0;
 		hours = 0;
 		minutes = 0; 
@@ -15,7 +15,7 @@ public class MPH
 	}
 	
 	//Constrctor with params
-	public MPH(int d, int h, int m, double mPh)
+	public MPH(int d, int h, int m )
 	{
 		distance = d;
 		hours = h;
@@ -24,7 +24,7 @@ public class MPH
 	}
 	
 	//Modifiers
-	public void setValues(int d, int h, int m, double mPh)
+	public void setValues(int d, int h, int m )
 	{
 		distance = d;
 		hours = h;
@@ -34,31 +34,25 @@ public class MPH
 	}
 	
 	//Accessors
+	public int getDist()
+	{
+		return distance;
+	}
+	
+	public int getHours()
+	{
+		return hours;
+	}
+	
+	public int getMins()
+	{
+		return minutes;
+	}
+	
 	public double getMPH()
 	{
 		mph =  Math.round(distance / (hours + minutes / 60.0));
 		return mph;
-	}
-	
-	public static void main(String[]args)
-	{
-		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter the distance");
-		 distance = kb.nextint();
-		System.out.println("Please enter the hours");
-		hours = kb.nextint();
-		System.out.println("Please enter the minutes");
-		minutes= kb.nextint();
-		
-		MilesPerHour object1 = new MilesPerHour(distance, hours, time);
-		System.out.println("User input for distance, hours, and minutes " + distance + ", " + hours + "," + minutes + ",");
-		System.out.println(distance + " miles in" + hours + "is" + object1.getMPH());
-		
-		object.setValues(500,5,30);
-		
-		System.out.println("User input for distance, hours, and minutes " + distance + ", " + hours + "," + minutes + ",");
-		System.out.println(distance + " miles in" + hours + "is" + object1.getMPH());
-		
 	}
 	
 	
