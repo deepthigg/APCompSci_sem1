@@ -8,7 +8,7 @@ public class InventoryItemsRunner
 		
 		
 		System.out.println("Item Name: ");
-		String itemname = kb.next();
+		String Itemname = kb.next();
 	
 		System.out.println("Manufacturer Name: ");
 		String Manufacturer = kb.next();
@@ -20,7 +20,7 @@ public class InventoryItemsRunner
 		
 		if(YorN.equals("n"))
 		{
-			item1 = new InventoryItems(itemname, manufacturer); 
+			item1 = new InventoryItems(n, m); 
 		}
 		else
 		{
@@ -28,7 +28,7 @@ public class InventoryItemsRunner
 			String c = kb.next();
 			System.out.println("Price: ");
 			double p = kb.nextDouble();
-			item1 = new InventoryItems(itemname, manufacturer, c, p);
+			item1 = new InventoryItems(n, m, c, i);
 		}
 		System.out.println(item1.toString());
      
