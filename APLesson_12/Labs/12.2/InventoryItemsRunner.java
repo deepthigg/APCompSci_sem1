@@ -27,7 +27,7 @@ public class InventoryItemsRunner
 			System.out.println("Cateory: ");
 			String c = kb.next();
 			System.out.println("Price: ");
-			double p = kb.nextDouble();
+			double i = kb.nextDouble();
 			item1 = new InventoryItems(n, m, c, i);
 		}
 		System.out.println(item1.toString());
