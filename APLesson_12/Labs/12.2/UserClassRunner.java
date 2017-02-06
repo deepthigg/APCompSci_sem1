@@ -15,7 +15,7 @@ public class UserClassRunner
 		UserClass user1 = new UserClass();
 		
 
-		System.out.println(" Would you like to use a public avatar");
+		System.out.println("Would you like to use a public avatar");
 		String YorN = kb.next();
 		
 		
