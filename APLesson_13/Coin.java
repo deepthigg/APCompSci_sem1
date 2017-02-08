@@ -1,31 +1,26 @@
-public class Bill
+public class Coin extends Money
 {
 	
-
-	private String name;
 	private double weight;
-	private double value;
-
-	public Money()
+	
+	public Coin()
 	{
-		name = "";
-		weight = 0;
-		value = 0;
+		super();
+		this.weight = 0;
 	
 	}
 	
-	public Money(String n, double w, double v)
+	public Coin(String n, double w, double v)
 	{
-		name = n;
-		weight= w;
-		value = v;
-	
+		super(n,v);
+		this.weight= w;
+		
 	}
 	
 	public String toString()
 	{
 		return "Weight:" + weight + "g/n" +
-				"Your" + name + "is worth $" + value + "\n";
+				super.toString();
 	}
 
 	
