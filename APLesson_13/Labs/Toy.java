@@ -19,12 +19,11 @@ public abstract class Toy
 	
 	public String getName()
 	{
-		return name;
-	
+		return this.name;
 	}
 	public int getCount()
 	{
-		return count;
+		return this.count;
 	}
 	
 	public void setName(String n)
@@ -41,7 +40,7 @@ public abstract class Toy
 	
 	public String toString()
 	{
-		return name + " " + count;		
+		return this.name + " " + this.count;		
 	}
 
 	

@@ -18,7 +18,7 @@ public class ToyStore
 	public void loadToys(String ts)
 	{
 		toyList = new ArrayList<Toy>();
-		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(",")));
+		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
 		for(int i = 0; i < toys.size(); i+=2)
 		{
 			String name = toys.get(i);
@@ -30,11 +30,9 @@ public class ToyStore
 			{
 				if(type.equals("AF")){
 					toyList.add(new AFigure(name));
-					System.out.println(toyList.get(i).getName());
 				}
 				if (type.equals("Car")){
 					toyList.add(new Car(name));
-					System.out.println(toyList.get(i));
 				}
 				
 			}
@@ -48,20 +46,21 @@ public class ToyStore
 	{
 		for(Toy b: toyList)
 		{
-			System.out.println(b.getName() + " " + nm);
 			if(b.getName().equals(nm))
 				return b;
 		}
 		return null;
 	}
-	/*
-	public void getMostFrequentToy()
+
+	public String getMostFrequentToy()
 	{
 		String name = "";
-		int max = Integer.MIN_Value;
+		int max = Integer.MIN_VALUE;
 		for(Toy b : toyList)
 		{
-			if(max < b.getCourt())
+			if(max == b.getCount())
+				name = "Equal counts of both " + name + " and " + b.getName();
+			if(max < b.getCount())
 			{
 				max = b.getCount();
 				name = b.getName();
@@ -70,15 +69,15 @@ public class ToyStore
 		return name;
 		
 	}
-	public  getMostFrequentType()
+	public String getMostFrequentType()
 	{
 		int cars = 0;
 		int figures = 0;
 		for (Toy a: toyList)
 		{
-			if(a.getType().equals("Cars"))
+			if(a.getType().equals("Car"))
 				cars++;
-			else if(a.getType().equals("Action Figures"))
+			if(a.getType().equals("Action Figure"))
 				figures++;
 		}
 		if(cars > figures)
@@ -89,7 +88,7 @@ public class ToyStore
 			return "Equals amounts of action figures and cars!";
 		
 	}
-	*/
+
 	public String toString()
 	{
 		return toyList.toString();
