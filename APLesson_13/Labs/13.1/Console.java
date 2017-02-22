@@ -10,6 +10,7 @@ public abstract class Console extends GameSystem
 	{
 		super(p);
 	}
+	
 	public String toString()
     {
         return "Platform: " +super.getPlatform( )+ 

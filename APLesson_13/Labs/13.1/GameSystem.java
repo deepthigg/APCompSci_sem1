@@ -17,8 +17,6 @@ public abstract class GameSystem
 		this.serialNo = (int)(Math.random()*7)+1;
 	}
 	
-	public abstract String getController();
-	
 	public String getPlatform( )
 	{
 		return platform;
