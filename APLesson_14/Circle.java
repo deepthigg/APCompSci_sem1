@@ -1,7 +1,8 @@
 public class Circle
 {
 	private double radius;
-	public Circle () {
+	public Circle () 
+	{
 		radius = 0;
 	}
 	public Circle(double r){
