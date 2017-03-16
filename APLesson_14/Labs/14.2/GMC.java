@@ -1,15 +1,19 @@
-public class Car implements Location
+public class GMC extends CarClass
 {
 	private double[] location;
-	public Final int ID = (Math.random()*1000000)+1;
-	public Car()
+	public GMC()
 	{
 		location = new double[2];
 	}
-
+	public GMC(double x, double y)
+	{
+		location = new double[2];
+		location[0] = x;
+		location[1]= y;
+	}
 	public int getID() 
 	{
-		return ID;
+		return (int)(Math.random()*1000000)+1;
 	}
 	public void move(double x, double y)
 	{
@@ -19,6 +23,5 @@ public class Car implements Location
 	public double[] getLoc()
 	{
 		return location;
-	}  
-	
+	}
 }

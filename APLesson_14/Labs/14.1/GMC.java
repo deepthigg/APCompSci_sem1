@@ -1,4 +1,4 @@
-public class GMC implements Location
+public class GMC extends CarClass
 {
 	private double[] location;
 	public GMC()
@@ -24,5 +24,4 @@ public class GMC implements Location
 	{
 		return location;
 	}
-	
 }

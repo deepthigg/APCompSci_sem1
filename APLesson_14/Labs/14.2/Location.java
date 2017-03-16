@@ -1,10 +1,8 @@
-public class Honda extends CarClass
+public interface Location
 {
-	public Honda(double[] coords)
-	{
-		location = coords;
-	}
-	public int getID() 
+   double[] getLoc();
+   public final int ID = (int)(Math.random()*1000000) + 999999;
+   public int getID() 
 	{
 		return ID;
 	}
@@ -17,5 +15,4 @@ public class Honda extends CarClass
 	{
 		return location;
 	}
-	
 }

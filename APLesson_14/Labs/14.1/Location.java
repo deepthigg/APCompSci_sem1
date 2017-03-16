@@ -1,5 +1,5 @@
 public interface Location
 {
    double[] getLoc();
-   int getID();
+   public final int ID = (int)(Math.random()*1000000) + 999999;
 }
