@@ -1,14 +1,6 @@
-
 public class Toyota extends CarClass
 {
 	private double[] location;
-	private double x;
-	private double y;
-	
-	public Toyota()
-	{
-		location = new double[2];
-	}
 	
 	public Toyota(String car)
 	{
@@ -17,19 +9,5 @@ public class Toyota extends CarClass
 		location[1] = Double.parseDouble(car.substring(3));
 	}
 	
-	public int getID()
-	{
-		return (int) (Math.random() * 1000000) + 1;
-	}
-	
-public void move(double x, double y)
-	{
-		location[0] += x;
-		location[1] += y;
-	}
-	public double[] getLoc()
-	{
-		return location;
-	}
 	
 }

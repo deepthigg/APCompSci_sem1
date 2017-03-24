@@ -37,7 +37,6 @@ public class Satellite
 			CarClass car = ((CarClass)l);
 			double one = Math.random() * 100 + 1;
 			double two = Math.random() * 100 + 1;
-			car.move(one, two);
 			printout += "\n\nAfter " + car.getID() + " moved (" + one + ", " + two + ")" +
 								"\nNew Location: " + getLocation(l.getLoc());
 		}

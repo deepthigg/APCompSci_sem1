@@ -1,21 +1,9 @@
-public class Honda extends CarClass
+public class Honda extends Location 
 {
 	public Honda(double[] coords)
 	{
 		location = coords;
 	}
-	public int getID() 
-	{
-		return ID;
-	}
-	public void move(double x, double y)
-	{
-		location[0] += x;
-		location[1] += y;
-	}
-	public double[] getLoc()
-	{
-		return location;
-	}
+	
 	
 }
