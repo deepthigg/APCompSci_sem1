@@ -1,9 +1,6 @@
 public interface Location
 {
-   double[] getLoc();
-   public int getID();
-   void move(double x,double y);
-   
-	
+	double[] getLoc();
+	int getID();
+	void move(double x, double y);
 }
-	

@@ -20,7 +20,7 @@ public class Satellite
        for (Location l : locate)
        {
 		   CarClass car = ((CarClass)l);
-           printout += "\nLocation for " + car.getID() + ": (" + getLocation(l.getLoc()) + ")";
+           printout += "\nLocation for " + car.getID() + ": " + getLocation(l.getLoc());
        }
 	   
        printout += "\n\n" + "==========================" +
@@ -29,7 +29,7 @@ public class Satellite
        for (Location l : locate)
        {
 		   CarClass car = ((CarClass)l);
-           printout += "\nDistance for " + car.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+           printout += "\nDistance for " + car.getID() + ": " + getDistance(l.getLoc(), home);
        }
 	   printout += "\n\n" + "==========================";
 		for(Location l: locate)
@@ -37,8 +37,9 @@ public class Satellite
 			CarClass car = ((CarClass)l);
 			double one = Math.random() * 100 + 1;
 			double two = Math.random() * 100 + 1;
+			double[] nums = {one, two};
 			car.move(one, two);
-			printout += "\n\nAfter " + car.getID() + " moved (" + one + ", " + two + ")" +
+			printout += "\n\nAfter " + car.getID() + " moved " + getLocation(nums) +
 								"\nNew Location: " + getLocation(l.getLoc());
 		}
 		
@@ -48,18 +49,18 @@ public class Satellite
        for (Location l : locate)
        {
 		   CarClass car = ((CarClass)l);
-           printout += "\nDistance for " + car.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+           printout += "\nDistance for " + car.getID() + ": " + getDistance(l.getLoc(), home);
        }
        System.out.println(printout);
    }
 
-   public static double getDistance(double[] car, double[] home)
+   public static String getDistance(double[] car, double[] home)
    {
-       return Math.sqrt((Math.pow(car[0] - home[0], 2)+ Math.pow(car[1] - home[1], 2)));
+       return String.format("%.2f", Math.sqrt((Math.pow(car[0] - home[0], 2)+ Math.pow(car[1] - home[1], 2))));
    }
 
    public static String getLocation(double[] loc)
    {
-       return "(" + loc[0] + ", " + loc[1] + ")";
+       return String.format("(%.2f, %.2f)", loc[0], loc[1]);
    }
 }
