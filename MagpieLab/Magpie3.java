@@ -6,13 +6,7 @@ public class Magpie3
 		return "Hello, let's talk.";
 	}
 
-	/**
-	 * Gives a response to a user statement
-	 * 
-	 * @param statement
-	 *            the user statement
-	 * @return a response based on the rules given
-	 */
+	
 	public String getResponse(String statement)
 	{
 		String response = "";
@@ -32,9 +26,17 @@ public class Magpie3
 			response = "Tell me more about your family.";
 		}
 
-		/* place code for pet keywords here */
+		else if (findKeyword(statement, "cat",0) >= 0
+				|| (findKeyword(statement, "fish",0)>= 0
+				|| (findKeyword(statement, "turtle",0) >= 0
+				|| (findKeyword(statement, "dog",0)>= 0)
 
 		/* place code for keyword "Robinette" here */
+		
+		else if (findKeyword(statement, "Mr. Robinette",0)>= 0)
+		{
+			response = "He sounds like a pretty dank teacher.";
+		}
 
 
 		else if (statement.trim().length() == 0)

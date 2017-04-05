@@ -17,25 +17,26 @@ public class Magpie2
 			return "Say something, please";
 		}
 
-		if (statement.indexOf("no") >= 0)
+		else if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
 		}
 
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0);
+		else if (findKeyword(statement, "mother",0) >= 0
+				|| findKeyword(statement, "father",0)>= 0
+				|| findKeyword(statement, "sister",0) >= 0
+				|| findKeyword(statement, "brother",0)>= 0)
 		{
+
 			response = "Tell me more about your family.";
 		}
 
 		
 		 
 		else if (findKeyword(statement, "cat",0) >= 0
-				|| (findKeyword(statement, "fish",0)>= 0
-				|| (findKeyword(statement, "turtle",0) >= 0
-				|| (findKeyword(statement, "dog",0)>= 0);
+				|| findKeyword(statement, "fish",0)>= 0
+				|| findKeyword(statement, "turtle",0) >= 0
+				|| findKeyword(statement, "dog",0)>= 0)
 		{
 			response = "Tell me more about your pets.";
 		}
