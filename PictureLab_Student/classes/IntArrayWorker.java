@@ -45,9 +45,38 @@ public class IntArrayWorker
     return total;
   }
   
-  /**
-   * Method to fill with an increasing count
-   */
+  public int getCount(int l)
+  {
+	  int count = 0;
+	  for(int row = 0; row < matrix.length; row++)
+	  {
+		  for(int col = 0; col < matrix[row].length; col++)
+		  {
+			  if(matrix[row][col] == (l))
+			  {
+				  count++;
+			  }
+		  }
+	  }
+	  return count;
+  }
+  
+  public int getLargest()
+  {
+	  int largest = -1;
+	  for(int[] row : matrix)
+	  {
+		  for(int i : row)
+		  {
+			  if(i>largest)
+			  {
+				  largest = i;
+			  }
+		  }
+	  }
+	  return largest;
+  }
+  
   public void fillCount()
   {
     int numCols = matrix[0].length;
@@ -62,6 +91,21 @@ public class IntArrayWorker
     }
   }
   
+  public void getColTotal()
+  {
+	 int total = 0;
+	 for(int row = 0; row < matrix.length; row++)
+	  {
+		  for(int col = 0; col < matrix[row].length; col++)
+		  {
+			  if(col == cols)
+			  {
+				  total+=matrix[row][col];
+			  }
+		  }
+	  }
+	return total;
+  }
   /**
    * print the values in the array in rows and columns
    */
