@@ -83,7 +83,7 @@ public class IntArrayWorkerTester
     IntArrayWorker worker = new IntArrayWorker();
     int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
     worker.setMatrix(nums2);
-    total = worker.getColTotal(0);
+    int total = worker.getColTotal(0);
     System.out.println("Total for column 0 should be 5 and is " + total);
     total = worker.getColTotal(1);
     System.out.println("Total for column 1 should be 7 and is " + total);
