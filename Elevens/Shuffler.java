@@ -49,22 +49,45 @@ public class Shuffler {
 	 * the cards in one half with the cards in the other.
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
-	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+	 public static void perfectShuffle(int[] values)
+	 {
+		int[] t = new int[values.length];
+		int half = (values.length + 1) / 2;
+
+	
+		int us = 0;
+		int k = 0;
+		for ( ; k < half; k++)
+			{
+			t[us] = values[k];
+			us += 2;
+			}
+		us = 1;
+		for ( ; k < values.length; k++) 
+		{
+		t[us] = values[k];
+		us += 2;
+		}
+     
+
+		for (k = 0; k < values.length; k++) 
+	{
+		values[k] = t[k];
+	}
+ }
+
+	
+	public static void selectionShuffle(int[] values)
+	{
+		for (int k = values.length - 1; k > 0; k--) 
+		{
+		
+			int op = (int) (Math.random() * (k + 1)); 
+			int t = values[op];
+			values[op] = values[k];
+			values[k] = t;
+		}
+			
 	}
 
-	/**
-	 * Apply an "efficient selection shuffle" to the argument.
-	 * The selection shuffle algorithm conceptually maintains two sequences
-	 * of cards: the selected cards (initially empty) and the not-yet-selected
-	 * cards (initially the entire deck). It repeatedly does the following until
-	 * all cards have been selected: randomly remove a card from those not yet
-	 * selected and add it to the selected cards.
-	 * An efficient version of this algorithm makes use of arrays to avoid
-	 * searching for an as-yet-unselected card.
-	 * @param values is an array of integers simulating cards to be shuffled.
-	 */
-	public static void selectionShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-	}
 }

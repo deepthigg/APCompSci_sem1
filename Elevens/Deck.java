@@ -29,8 +29,15 @@ public class Deck {
 	 * @param suits is an array containing all of the card suits.
 	 * @param values is an array containing all of the card point values.
 	 */
-	public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+	public Deck(String[] ranks, String[] suits, int[] values) 
+	{
+		this.cards = new ArrayList<Card>();
+        for (int i = 0; i < ranks.length; i++) {
+            Card theCard = new Card(ranks[i], suits[i], values[i]);
+            this.cards.add(theCard);
+        }
+        this.size = this.cards.size();
+        shuffle();
 	}
 
 
@@ -38,16 +45,23 @@ public class Deck {
 	 * Determines if this deck is empty (no undealt cards).
 	 * @return true if this deck is empty, false otherwise.
 	 */
-	public boolean isEmpty() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-	}
+	public boolean isEmpty()
+	{
+		if (this.cards.size() == 0) 
+		{
+            return true;
+        }
+        return false;
+    }
+	
 
 	/**
 	 * Accesses the number of undealt cards in this deck.
 	 * @return the number of undealt cards in this deck.
 	 */
-	public int size() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+	public int size() 
+	{
+		return this.cards.size();
 	}
 
 	/**
@@ -55,7 +69,13 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		for (int i = cards.size() - 1; i > 0; i--) 
+		 {
+			int pos = (int)(Math.random() * (i + 1)); 
+			Card temp = cards.get(pos);
+			cards.set(pos, cards.get(i));
+			cards.set(i, temp);
+		 }
 	}
 
 	/**
@@ -63,8 +83,13 @@ public class Deck {
 	 * @return the card just dealt, or null if all the cards have been
 	 *         previously dealt.
 	 */
-	public Card deal() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+	public Card deal() 
+	{
+		this.size = this.size - 1;
+        if (this.size > 0) {
+            return this.cards.get(this.size);
+        }
+        return null;
 	}
 
 	/**

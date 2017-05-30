@@ -8,7 +8,9 @@ public class CardTester
 	 * The main method in this class checks the Card operations for consistency.
 	 *	@param args is not used.
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
+		
 		Card card1 = new Card("Diamond", "4", 4);
 		Card card2 = new Card("Diamond", "4", 4);
 		Card card3 = new Card("Diamond", "Queen", 12);
