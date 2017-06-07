@@ -21,82 +21,46 @@ public class Deck {
 	private int size;
 
 
-	/**
-	 * Creates a new <code>Deck</code> instance.<BR>
-	 * It pairs each element of ranks with each element of suits,
-	 * and produces one of the corresponding card.
-	 * @param ranks is an array containing all of the card ranks.
-	 * @param suits is an array containing all of the card suits.
-	 * @param values is an array containing all of the card point values.
-	 */
-	public Deck(String[] ranks, String[] suits, int[] values) 
-	{
-		this.cards = new ArrayList<Card>();
-        for (int i = 0; i < ranks.length; i++) {
-            Card theCard = new Card(ranks[i], suits[i], values[i]);
-            this.cards.add(theCard);
-        }
-        this.size = this.cards.size();
-        shuffle();
-	}
-
-
-	/**
-	 * Determines if this deck is empty (no undealt cards).
-	 * @return true if this deck is empty, false otherwise.
-	 */
-	public boolean isEmpty()
-	{
-		if (this.cards.size() == 0) 
-		{
-            return true;
-        }
-        return false;
-    }
 	
-
-	/**
-	 * Accesses the number of undealt cards in this deck.
-	 * @return the number of undealt cards in this deck.
-	 */
-	public int size() 
-	{
-		return this.cards.size();
+	public Deck(String[] ranks, String[] suits, int[] values) {
+		cards = new ArrayList<Card>();
+		for (int j = 0; j < ranks.length; j++) {
+			for (String suitString : suits) {
+				cards.add(new Card(ranks[j], suitString, values[j]));
+			}
+		}
+		size = cards.size();
+		shuffle();
 	}
 
-	/**
-	 * Randomly permute the given collection of cards
-	 * and reset the size to represent the entire deck.
-	 */
+
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
+	public int size() {
+		return size;
+	}
+
 	public void shuffle() {
-		for (int i = cards.size() - 1; i > 0; i--) 
-		 {
-			int pos = (int)(Math.random() * (i + 1)); 
-			Card temp = cards.get(pos);
-			cards.set(pos, cards.get(i));
-			cards.set(i, temp);
-		 }
-	}
-
-	/**
-	 * Deals a card from this deck.
-	 * @return the card just dealt, or null if all the cards have been
-	 *         previously dealt.
-	 */
-	public Card deal() 
-	{
-		this.size = this.size - 1;
-        if (this.size > 0) {
-            return this.cards.get(this.size);
+		for( int k = size - 1; k >= 0; k-- ) {
+            int r = (int)(Math.random() * k);
+            Card tmp = cards.get(r);
+            cards.set(r, cards.get(k));
+            cards.set(k, tmp);
         }
-        return null;
 	}
 
-	/**
-	 * Generates and returns a string representation of this deck.
-	 * @return a string representation of this deck.
-	 */
-	@Override
+	
+	public Card deal() {
+		if (isEmpty()) {
+			return null;
+		}
+		size--;
+		Card c = cards.get(size);
+		return c;
+	}
+
 	public String toString() {
 		String rtn = "size = " + size + "\nUndealt cards: \n";
 
